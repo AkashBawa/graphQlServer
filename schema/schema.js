@@ -120,6 +120,7 @@ const RootQuery = new GraphQLObjectType({
         books : {
             type : GraphQLList(BookSchema),
             async resolve(parent,args){
+                console.log("book reached")
                 return await BookModel.find({});
             }
         },
